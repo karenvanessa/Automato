@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>
+       Expresiones Regulares 
+  </title>
+</head>
+<body>
+<h2>Expresiones Regulares</h2>
+<br>
+    <form>
+      <h3>Expresion: (abc12345ABC])</h3>
+      <div><span>Expresi&oacuten </span><input type="text" name="nombre" id="nombre" required/></div>
+      <br>
+      <div><input type="submit" name="Enviar" value="Enviar"/></div>
+      <br>
+    </form>
+
+    <script>
+      var n = document.getElementById('nombre');
+      var formulario = document.getElementsByTagName('form')[0];
+
+            formulario.onsubmit = function(){
+
+              var expReg1 =/[a-z]{3}[0-9]{5}[A-Z]{3}[\]]/i;
+              var respuesta = expReg1.test(n.value);
+                  if (respuesta==false) {
+                    alert('no coincide');
+                    return false;
+                  }
+                  else 
+                    alert('FELICIDADES!!!! GANASTE UN Iphonee 6!!! Eres nuestro visitante numero 1000');
+            }
+            
+    </script>
+</body>
+</html>
